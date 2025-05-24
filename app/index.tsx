@@ -1,19 +1,24 @@
-import { Stack, Link } from 'expo-router';
+import { View, Text, Animated, useAnimatedValue } from 'react-native'
+import React from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { Redirect } from 'expo-router';
+import NoLibrary from './(tutorials)/(animated-api)/no-library';
 
-import { Button } from '~/components/Button';
-import { Container } from '~/components/Container';
-import { ScreenContent } from '~/components/ScreenContent';
-
-export default function Home() {
+const Index = () => {
+    const fadeAnim = useAnimatedValue(0);
+// if (true) {
+//  return <Redirect href={'/no-library'} />
+// }
   return (
-    <>
-      <Stack.Screen options={{ title: 'Home' }} />
-      <Container>
-        <ScreenContent path="app/index.tsx" title="Home"></ScreenContent>
-        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
-          <Button title="Show Details" />
-        </Link>
-      </Container>
-    </>
-  );
+      <SafeAreaView
+       className='  flex-1 bg-black p-5 '
+       >
+         {/* <Text className='text-white text-center  font-semibold text-xl underline'>Animations using </Text> */}
+         {/* Animated API */}
+
+         <NoLibrary />
+       </SafeAreaView>
+  )
 }
+
+export default Index
