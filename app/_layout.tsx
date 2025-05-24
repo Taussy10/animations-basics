@@ -10,7 +10,7 @@ export default function Layout() {
     }}
     >
       <Stack.Screen name='index' />
-      <Stack.Screen name='no-library' />
+      <Stack.Screen name='one-d-left-to-right' />
     </Stack>
   )
 }
