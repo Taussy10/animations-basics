@@ -14,7 +14,7 @@ const Index = () => {
       <SafeAreaView
        className='  flex-1 bg-black p-5 '
        >
-         <Text className='text-white text-center    font-extrabold text-2xl underline mb-10'>Animations</Text>
+         <Text className='text-white text-center    font-extrabold text-4xl tracking-wide underline mb-10'>Animations</Text>
          {/* Animated API */}
 
          {/* <NoLibrary /> */}

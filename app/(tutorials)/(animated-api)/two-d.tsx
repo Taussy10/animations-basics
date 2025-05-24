@@ -23,16 +23,24 @@ const TwoD = () => {
     // if you look at here Y and X it's is working one by one: and only 
     // X is working when Y is finished  
     // so we need to write X inside Y cause it depends on taht 
+
+    // sabse pehel ye function execute hoga 
     setpositionY((prevY) => {
         // move only after certain condiiton
         if (prevY<400) {
-            
-          return prevY + 20 
-        //   return (prevY <= 200 ? prevY + 20 : 0) 
+            // we wroking with functions so to store the value in 
+            // postionY we have to return it 
+            // why inside if statement ? we don't do as such ?
+            // cause we are changing value here: if we do outside the statement then
+            //  prevY value will be intial-value(0) that will be set in PositionY = 0 code won't work 
+
+          return prevY + 20  
         }
+        // this after if statemnt value will be set that's it with sePostionY
 
 
-        // For X 
+
+        // Now this function will execute  
         setpositionX((prevX) => {
             if (prevX < 200) {
                 return prevX + 20
@@ -45,22 +53,7 @@ const TwoD = () => {
 
 
     })
-    // setpositionY((prevY) => {
-    //   if (prevY < 400) return prevY + 20;
-
-    //   // If Y done, now handle X
-    //   setpositionX((prevX) => {
-    //     if (prevX < 200) return prevX + 20;
-        
-    //     // If both done, reset both
-    //     setpositionY(0);
-    //     return 0;
-    //   });
-
-    //   return prevY;
-    // //   return prevX;
-    // });
-
+   
 
 
   }, 200);
